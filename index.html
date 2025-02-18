@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Imágenes por BIB</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-camera"></i> FotoBuscador</div>
+        <p>Encuentra y descarga tus imágenes por número BIB</p>
+    </header>
+
+    <div class="search-container">
+        <form id="search-form" class="search-form">
+            <input type="number" id="search-input" class="search-input" placeholder="Ingresa tu número BIB (4 dígitos)" min="0" max="9999" required>
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+        <p class="instructions">Introduce un número BIB de 4 dígitos para buscar tus imágenes</p>
+    </div>
+
+    <main>
+        <div class="spinner" id="spinner"></div>
+        <div class="gallery-container" id="gallery-container"></div>
+    </main>
+
+    <div class="modal" id="image-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">×</button>
+            <img class="modal-image" id="modal-image" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rony Vasquez - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
